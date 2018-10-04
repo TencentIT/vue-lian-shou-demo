@@ -3,7 +3,7 @@
     <div class="header">
        <router-link to="/home">我是首页</router-link>
        <router-link to="/news">我是新闻</router-link>
-        <router-link to="/user">我是用户</router-link>
+        <router-link to="/user">我是用户user</router-link>
     <router-view></router-view>
     </div>
   </div>

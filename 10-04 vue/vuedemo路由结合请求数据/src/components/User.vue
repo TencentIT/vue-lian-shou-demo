@@ -5,7 +5,7 @@
             <div class="left">
                 <ul>
                     <li>增加用户</li>
-                    <li>用户列表</li>
+                    <li>用户列表   </li>
                 </ul>
             </div>
             <div class="right">
