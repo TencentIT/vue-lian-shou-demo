@@ -1,6 +1,8 @@
 <template>
+    <!-- 路由的嵌套 1配置路由 2父路由里面配置子路由显示的地方<router-view></router-view> -->
     <div id="user">
         <h1>user page</h1>
+       
         <div class="user">
             <div class="left">
                 <ul>
@@ -14,13 +16,49 @@
             </div>
             <div class="right">
                 显示区域
+                <mt-button type="primary" size="small" @click.native="flag = true">选择用户头像</mt-button>
+
+                <mt-actionsheet :actions="actions" v-model="flag"></mt-actionsheet>
+
                 <router-view></router-view>
             </div>
         </div>
+        <v-action-sheet></v-action-sheet>
     </div>
 </template>
 <script>
-    
+import ActionSheet from "./ActionSheet.vue"
+    export default{
+        data(){
+           return{
+                flag:false,
+                actions:[]
+           }
+
+        },
+       methods:{
+           takePhoto(){
+               alert("拍照")
+           },
+           openAlbum(){
+               alert("从相册中选择")
+           }
+       },
+       components:{
+           vActionSheet:ActionSheet
+       },
+        mounted() {
+            this.actions = [{
+                name: '拍照',
+                method: this.takePhoto
+            }, {
+                name: '从相册中选择',
+                method: this.openAlbum
+            }];
+      
+    }
+
+    }
 </script>
 
 <style lang="scss">

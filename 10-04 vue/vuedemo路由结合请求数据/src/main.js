@@ -9,6 +9,13 @@ Vue.use(VueRouter);
 import VueResource from "vue-resource"
 Vue.use(VueResource)
 
+// 引入mint-ui
+import Mint from "mint-ui"
+Vue.use(Mint)
+import "mint-ui/lib/style.css"
+
+
+
 //1创建组件
 import Home from "./components/Home.vue"
 import Content from "./components/Content.vue"
