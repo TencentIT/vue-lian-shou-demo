@@ -14,7 +14,10 @@ import Mint from "mint-ui"
 Vue.use(Mint)
 import "mint-ui/lib/style.css"
 
-
+//引入 element-ui
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
 //1创建组件
 import Home from "./components/Home.vue"
